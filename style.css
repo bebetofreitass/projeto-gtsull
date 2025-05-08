@@ -1,0 +1,148 @@
+
+/*variaveis de cores */
+:root{
+    --cor-primaria: #ff0000;
+    --cor-texto: #333;
+    --cor-clara: #FFFFFF;
+    --sombra: 0 3px 10px rgb(0, 0, 0, 2.0);
+    --cor-destaque: #0000ff;
+}
+/* reset layout navegador*/
+*{
+    margin: 0; /*Margem*/
+    padding: 0; /*adicionar espaço interno dentro de um elemento*/
+    box-sizing: border-box; 
+}
+body{
+    font-family: 'Segoe UI', sans-serif; /*Fonte do texto*/
+    line-height: 1.6; /*altura do texto*/
+    color: var(--cor-texto); 
+}
+/*conteudo-sobre */
+.cabecalho{
+    background-color: var(--cor-primaria);
+    color: var(--cor-clara);
+    padding: 1rem 0 ; /* 1rem equilave a 16px */
+}
+/* tamanho do gereção tech */
+.logo{
+    width: 150px;/*largura*/
+}
+/* sobre-conteudo lado sup-direito */
+.container{
+    width: 80%;/*largura*/
+    margin: 0 auto;
+}
+.cabecalho .container{
+display: flex;
+align-items: center; /* Alinhar item, Mexe na Vertical*/
+justify-content: space-between; /* Alinhar item,Mexe na Horizontal*/
+}
+.menu{
+    display: flex;
+    gap: 1.5rem; /*gap tirar sobre*/
+    list-style: none; /*Os Pontinhos do lado da palavra*/
+}
+.menu a {
+    color: var(--cor-clara);
+    text-decoration: none; /*Decorar o texto*/
+}
+.banner{
+    position: relative;
+    color: var(--cor-clara);
+    padding: 0%; /*adicionar espaço interno dentro de um elemento*/
+    overflow: hidden; /*quando o conteúdo de um elemento é maior do que a área disponível para ele*/
+    height: 90vh;/*Altura do video*/
+    display: flex;
+    align-items: center ; /*Alinhar item, Mexe na Vertical*/
+}
+.video-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;/*largura*/
+    right: 100%;
+    z-index: -1;
+}
+.video-container video{
+    width: 100%;/*largura*/
+    height: 100%;/*Altura*/
+    object-fit: cover;/*controlar como uma imagem*/
+    object-position: center;
+}
+/* deixar o video com tom escuro*/
+.overlay { 
+    position: absolute;
+    top: 0;/*Posição vertical*/
+    left: 0;/*Posição Horizontal */
+    width: 100%;/*largura*/
+    height: 100%;/*Altura*/
+    background: rgba(0, 0, 0, 0.6);
+}
+.banner .container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.sobre{
+    padding: 4rem;/*adicionar espaço interno dentro de um elemento*/
+}
+.sobre-conteudo{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*definir colunas*/
+    gap: 2rem;
+    align-items: center;
+}
+/* Imagem do HTML */
+.sobre-conteudo img { 
+   width: 100%;/*largura*/
+   border-radius: 8px; /*arredondar as bordas da img*/
+   box-shadow: var(--sombra);
+}
+.sobre-texto ul{
+   list-style: none;
+   margin-top: 1rem;
+}
+.sobre-texto li{ 
+   margin-bottom: 0.5rem;
+   padding-left: 1.5rem;
+   position: relative;
+}
+.sobre-texto li::before {
+   content: '•';/*Ponto do lado da palavra*/
+   color: var(--cor-destaque);
+   position: absolute;/*Espaço do ponto*/
+   left: 0;/*Posição Horizontal */
+}
+/*Botão Moodle*/
+.botao {
+    display: inline-block;
+    background: var(--cor-primaria);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.botao:hover {
+   transform: translateY(-2px);
+}
+
+h2 {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+o{
+    color: var(--cor-clara);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
